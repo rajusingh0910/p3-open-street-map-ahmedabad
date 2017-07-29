@@ -226,6 +226,8 @@ So, I think there are several opportunities for cleaning and validation of the d
 * The tourists or even the city people search map to see the basic amenities provided in the city or what are the popular places and attractions in the city or near outside the city. So, the users must be motivated to also provide these informations in the map.
 * If we can provide these informations then there are more chances to increase views on the map because many people directly enter the famous name on the map.
 
+#### Further Improvement
+One way to improve this numbers is to leverage the public data provided. Accessibility information for hundreds of restaurants, cafes, tourist attractions, community centers, and other public spaces could be added to the dataset. Programmatically extracting the yes/no information and adding it to the OpenStreetMap dataset would likely be most efficient. The more detailed comments in the spreadsheet could even be programmatically added under the OpenStreetMap "note" key. One difficulty would be dealing with naming inconsistencies between Access data and nodes already in the OpenStreetMap dataset, though this could be overcome with careful string handling and a human verifying inputted data.
 
 # Files
 * `README.md` : this file
