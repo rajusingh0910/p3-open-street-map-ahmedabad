@@ -191,6 +191,24 @@ pizza =2
 Punjabi,_SouthIndia,_Gujarati Thali =1
 burger =1
 ```
+###Popular Banks
+```python
+sqlite> SELECT nodes_tags.value, COUNT(*) as num
+FROM nodes_tags 
+    JOIN (SELECT DISTINCT(id) FROM nodes_tags WHERE value='banks') i
+    ON nodes_tags.id=i.id
+WHERE nodes_tags.key='name'
+GROUP BY nodes_tags.value
+ORDER BY num DESC;
+```
+**Output:**
+```
+Bank of Baroda= 4
+Central Bank of India= 2
+HDFC Bank= 2
+HDFC Bank Relief Road Branch= 2
+Indian Bank= 2
+```
 
 # 5. Conclusion
 The OpenStreetMap data of Ahmedabad is of fairly reasonable quality but the typo errors caused by the human inputs are significant. We have cleaned a significant amount of the data which is required for this project. But, there are lots of improvement needed in the dataset. The dataset contains very less amount of additional information such as amenities, tourist attractions, popular places and other useful interest. The dataset contains very old information which is now incomparable to that of Google Maps or Bing Maps.
